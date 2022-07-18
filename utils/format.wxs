@@ -1,0 +1,39 @@
+// 播放次数转换
+function formatCount(count){
+  var counter = parseInt(count)
+  if(counter > 100000000){
+    return (counter/100000000).toFixed(1) + '亿'
+  }
+  else if(counter > 10000){
+    return (counter/10000).toFixed(1) + '万'
+  }
+  else{
+    return counter + ""
+  }
+}
+
+// 时间左边填0
+function padLeftZero(time){
+  // 将时间转为字符串
+  time = time+""
+  // 例如时间为19 0019 通过slice通过time长度2，从2位置进行剪裁则得到19。
+  // 例如时间为9 009 通过slice通过time长度1，从1位置进行剪裁则得到09。
+  return ("00"+time).slice(time.length)
+}
+
+// MV时间格式转换
+function formatDuration(duraction){
+  // 转为秒 210.667
+  var duractionSec = duraction / 1000
+  var m = Math.floor(duractionSec/60)
+  var s = Math.floor(duractionSec % 60) // 210 / 60 余30 则秒数为30
+
+  return padLeftZero(m) + ':' + padLeftZero(s)
+}
+
+
+// wxs文件不支持es6的语法 不能使用export直接导出 必须使用es5的module.export
+module.exports = {
+  formatCount:formatCount,
+  formatDuration:formatDuration
+}

@@ -1,0 +1,20 @@
+<!-- 自动播放 循环播放 -->
+<video class="video" 
+       src="{{mvURLInfo.url}}" 
+       danmu-list="{{danmuList}}"
+       autoplay
+       loop>
+</video>
+
+<view class="content">
+    <video-detail detailInfo="{{mvDetail}}"></video-detail>
+    <view class="video-list">
+        <view class="title">推荐视频</view>
+        <view class="related-list" wx:for="{{relatedVideos}}" wx:key="id">
+          <video-related-item relatedData="{{item}}"
+                              data-item="{{item}}"
+                              bindtap="handleRelatedItemClick">
+          </video-related-item>
+        </view>
+    </view>
+</view>

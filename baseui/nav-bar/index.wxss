@@ -1,0 +1,40 @@
+/* baseui/nav-bar/index.wxss */
+.nav-bar{
+  display: flex;
+  color: #fff; 
+}
+.nav-bar .left,.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120rpx;
+}
+.nav-bar .center{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .left-arrow{
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+/* .left插槽 - +相邻选择器对顺序有要求，虽然叫相邻但是却只能选他的后面一个元素*/
+.left-slot:empty + .left-arrow{
+  display: flex;
+}
+.left .left-arrow .icon{
+  width: 44rpx;
+}
+
+.center-title{
+  display: none;
+}
+.center-slot:empty + .center-title{
+  display: block;
+}
+

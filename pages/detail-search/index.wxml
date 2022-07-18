@@ -1,0 +1,41 @@
+<!--pages/detail-search/index.wxml-->
+<!-- show-action -> searchValue有值时显示取消按钮 -->
+<vant-search 
+            value="{{searchValue}}"
+            background="#f7f7f7" 
+            shape="round"   
+            show-action="{{searchValue}}"
+            placeholder="请输入搜索关键词"
+            bind:change="handleSearchChange"
+            bind:search="handleSearchAction">
+</vant-search>
+
+<view class="hot" wx:if="{{!searchValue.length && !suggestSongs.length}}">
+  <area-header title="热门搜索" showRight="{{false}}"></area-header>
+  <view class="keywords">
+    <block wx:for="{{hotKeywords}}" wx:key="first">
+      <view class="tag" bindtap="handleKeywordItemClick" data-keyword="{{item.first}}">{{item.first}}</view>
+    </block>
+  </view>
+</view>
+
+<view class="suggest" wx:elif="{{searchValue.length && !resultSongs.length}}">
+  <view class="title">搜索"{{searchValue}}"</view>
+  <view class="list">
+    <block wx:for="{{suggestSongs}}" wx:key="keyword">
+      <view class="item" bindtap="handleKeywordItemClick" data-keyword="{{item.keyword}}">
+        <image src="/assets/images/icons/search_icon.png"></image>
+        <rich-text nodes="{{suggestSongsNodes[index]}}"></rich-text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="result" wx:elif="{{resultSongs.length}}">
+  <view class="title">最佳匹配</view>
+  <view class="list">
+    <block wx:for="{{resultSongs}}" wx:key="id">
+      <song-item-v2 item="{{item}}" index="{{index+1}}"></song-item-v2>
+    </block>
+  </view>
+</view>

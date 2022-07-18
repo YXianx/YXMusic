@@ -1,0 +1,24 @@
+/* pages/detail-video/index.wxss */
+page{
+  padding-top: 225px;
+}
+.video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.content{
+  width: 100%;
+  padding: 10px 10px;
+}
+.content .video-list{
+  width: 100%;
+  margin-top: 30px;
+}
+.content .video-list .related-list{
+  width: 100%;
+}
+
+

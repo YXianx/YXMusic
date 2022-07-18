@@ -1,0 +1,42 @@
+/* components/song-menu-item/index.wxss */
+.menu-item{
+  width: 200rpx;
+  height: 285rpx;
+  border-radius: 4px;
+}
+.menu-item .pic{
+  position: relative;
+
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 4px;
+}
+.menu-item .pic image{
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.menu-item .pic .menu-count{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding:5rpx 10rpx;
+  opacity: 0.8;
+  border-radius: 4px;
+  background-color: #282828;
+
+  font-size: 23rpx;
+  color: #f4f4f4;
+}
+.menu-item .title{
+  font-size: 27rpx;
+  margin-top: 10rpx;
+
+  /* 文字超出两行省略显示 */
+  display:-webkit-box;  /* 将对象作为弹性伸缩盒子模型显示。 */
+  -webkit-box-orient:vertical;   /* 从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式） */
+  -webkit-line-clamp:2;    /* 这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数 */
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,92 @@
+/* components/song-detail-header/index.wxss */
+.header{
+  position: relative;
+  left: -20rpx;
+  /* padding: 40rpx 40rpx; */
+  width: 100vw;
+  height: 400rpx;
+}
+.header .bgImg{
+  position: absolute;
+  left: 0rpx;
+  width: 100vw;
+  height: 400rpx;
+  z-index: -5;
+}
+.header .mask{
+  position: absolute;
+  width: 100vw;
+  height: 400rpx;
+  z-index: -1;
+  /* background-color: transparent; */
+  /* 遮罩层高斯模糊自定义颜色 需要使用rgba background和op设置则不起作用 */
+  background:rgba(7, 17, 27, .6);
+  backdrop-filter: blur(12rpx);
+}
+
+.header .info{
+  display: flex;
+  padding: 40rpx 40rpx;
+}
+.info .left{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 4px;
+}
+.info .left image{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.info .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 40rpx;
+  flex: 3;
+}
+.info .right .menu-name{
+  color: #f4f4f4;
+  font-weight: 600;
+  font-size: 33rpx;
+}
+.info .right .author{
+  display: flex;
+  align-items: center;
+}
+.right .author image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.right .author .name{
+  margin: 0 10rpx;
+  color: #f4f4f4;
+}
+.right .desc{
+  width:370rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 25rpx;
+  color: #f4f4f4;
+}
+.operation{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.operation .icon{
+  width: 50rpx;
+}
+.operation .favor,.share{
+  display: flex;
+  align-items: center;
+}
+.operation .favor .text,.share .text{
+  font-size: 25rpx;
+  color: #f4f4f4;
+  margin: 0 10rpx;
+}

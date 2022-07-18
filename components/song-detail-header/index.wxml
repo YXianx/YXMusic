@@ -1,0 +1,30 @@
+<!--components/song-detail-header/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<view class="header">
+    <image class="bgImg" src="{{songsInfo.playlist.coverImgUrl}}" mode="aspectFill" alt=""/>
+    <view class="mask"></view>
+    <view class="info">
+      <view class="left">
+        <image src="{{songsInfo.playlist.coverImgUrl}}" mode="aspectFill" alt=""/>
+      </view>
+      <view class="right">
+        <text class="menu-name">{{songsInfo.cat}}</text> 
+        <view class="author">
+          <image src="{{songsInfo.playlist.creator.avatarUrl}}" mode="aspectFill"></image>
+          <text class="name">{{songsInfo.playlist.creator.nickname}}</text>
+        </view>
+        <view class="desc">{{songsInfo.playlist.description}}</view>
+      </view>
+    </view>
+    <view class="operation">
+      <view class="favor">
+        <image class="icon" mode="widthFix" src="/assets/images/icons/favor_icon.png" alt=""/>
+        <text class="text">{{format.formatCount(songsInfo.playlist.playCount)}}</text>
+      </view>
+      <view class="share">
+        <image class="icon" mode="widthFix" src="/assets/images/icons/share_icon.png" alt=""/>
+        <text class="text">分享</text>
+      </view>
+    </view>
+  </view>

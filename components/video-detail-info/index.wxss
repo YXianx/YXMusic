@@ -1,0 +1,20 @@
+/* components/video-detail/index.wxss */
+.detail-info{
+  width: 100%;
+}
+.detail-info .title{
+  font-weight: 700;
+}
+.detail-info .author{
+  color: #888888;
+  font-size: 13px;
+  margin: 5px 0;
+}
+.detail-info .info{
+  display: flex;
+  color: #888888;
+  font-size: 13px;
+}
+.info .date{
+  margin-left: 5px;
+}

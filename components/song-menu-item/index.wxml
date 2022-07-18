@@ -1,0 +1,9 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<view class="menu-item">
+  <view class="pic">
+    <image src="{{smiSongMenuItem.coverImgUrl}}"></image>
+    <view class="menu-count"><view class="num">{{format.formatCount(smiSongMenuItem.playCount)}}</view></view>
+  </view>
+  <view class="title">{{smiSongMenuItem.name}}</view>
+</view> 

@@ -1,0 +1,18 @@
+/* components/song-menu-area/index.wxss */
+.menu-list{
+  /* 实现滚动条宽度100%占满显示 */
+  position: relative;
+  left: -20rpx;
+  white-space: nowrap;
+}
+
+/* 设置最后一个item有间隙 实现当在头或者在尾的时候和边缘有20rpx的距离 除了头和尾其他位置都是100%占满 */
+.sma-menu-item{
+  display: inline-block;
+  margin-left:20rpx;
+  /* 顶部对齐 -> 部分机型会显示有问题需要该属性解决这个bug*/
+  vertical-align: top;
+}
+.sma-menu-item:last-of-type{
+  margin-right: 20rpx;
+}

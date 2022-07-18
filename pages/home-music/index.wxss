@@ -1,0 +1,90 @@
+/* pages/home-music/index.wxss */
+page{
+  padding:0 20rpx;
+  background-color: #fafafa;
+}
+/* 覆盖原来的search样式 !important权重最高覆盖 */
+.van-search__content{
+  background-color: #fff !important;
+}
+.van-search{
+  padding: 10px 0 !important;
+}
+/* end */
+
+.swiper{
+  border-radius: 3px;
+  /* 溢出隐藏 修复滚动时 边角没有弧度 */
+  overflow: hidden;
+  /* 部分机型不适配圆角 设置translateY(0)即可 */
+  transform: translateY(0);
+}
+.swiper-img{
+  width: 100%;
+  border-radius: 3px;
+}
+.swiper-item{
+  display: flex;
+  border-radius: 3px;
+}
+.item{
+  margin: 30rpx 0;
+}
+
+/* 播放栏 */
+.play-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 44px;
+  padding: 0 10px;
+
+  background: #f4f4f4;
+  box-shadow: 0 0 10px rgba(100, 100, 100, .3);
+}
+
+.play-bar .left{
+  display: flex;
+  align-items: center;
+}
+.left .name{
+  font-size: 24rpx;
+}
+.play-bar .left image{
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.play-bar .right{
+  display: flex;
+  align-items: center;
+}
+.right image{
+  width: 20px;
+  height: 20px;
+  margin: 0 3px;
+}
+.right image:nth-child(2){
+  width: 25px;
+  height: 25px;
+}
+
+/* css3动画 */
+@keyframes albumRotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.album-animation{
+  /* 线性动画 循环执行 */
+  animation: albumRotate 16s linear infinite;
+}

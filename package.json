@@ -1,0 +1,24 @@
+{
+  "name": "yxmusic",
+  "version": "1.0.0",
+  "description": "wx YXMusic",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.10.3",
+    "hy-event-store": "^1.2.1",
+    "vant": "^3.5.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/__tests__/fixtures/"
+    ],
+    "collectCoverage": true,
+    "testEnvironment": "node"
+  }
+}

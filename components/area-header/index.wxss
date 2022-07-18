@@ -1,0 +1,31 @@
+/* components/area-header/index.wxss */
+.area-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 25rpx 0;
+}
+.title{
+  font-weight: 700;
+  font-size: 35rpx;
+  color: #333;
+}
+/* 默认插槽内容不显示 */
+.default{
+  display: none;
+  align-items: center;
+}
+.default text{
+  font-size: 28rpx;
+  color:#777;
+  font-family:"微软雅黑"
+}
+.default .icon{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+/* 实现默认插槽 当未插入插槽时.slot标签内部为空，则显示default默认内容 */
+.area-header .slot:empty + .default{
+  display: flex;
+}

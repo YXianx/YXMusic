@@ -1,0 +1,9 @@
+<view class="video">
+  <view class="item" wx:for="{{topMVs}}" wx:key="id">
+  <!-- video-item-v1 MV列表组件 / data-item 给点击时的event对象添加item属性 -->
+    <video-item-v1 item="{{item}}" 
+                   bindtap="handleVideoItemClick" 
+                   data-item="{{item}}">
+    </video-item-v1>
+  </view>
+</view>

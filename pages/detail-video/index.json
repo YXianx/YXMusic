@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "video-detail":"../../components/video-detail-info/index",
+    "video-related-item":"../../components/video-related-item/video-related-item"
+  }
+}

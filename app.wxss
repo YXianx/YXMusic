@@ -1,0 +1,6 @@
+/* 全局样式 */
+page{
+    /* 将boder和padding数值包含在width和height之内 修改padding和boder时盒子大小不变 */
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
